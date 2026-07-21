@@ -15,7 +15,6 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.pager.HorizontalPager
-import androidx.compose.foundation.pager.PageSize
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -75,11 +74,6 @@ fun OnboardingScreen(
     val userSettings = LocalUserSettings.current
     val configuration = LocalConfiguration.current
     val isTablet = configuration.screenWidthDp >= 600
-    val tabletPageWidth = minOf(configuration.screenWidthDp - 64, 720)
-        .coerceAtLeast(1)
-        .dp
-    val tabletPagerPadding = ((configuration.screenWidthDp.dp - tabletPageWidth) / 2)
-        .coerceAtLeast(0.dp)
     
     val steps = remember {
         listOf(
@@ -120,14 +114,7 @@ fun OnboardingScreen(
                 state = pagerState,
                 modifier = Modifier.weight(1f),
                 userScrollEnabled = isTablet || steps[pagerState.currentPage] !is OnboardingStep.Setup,
-                beyondViewportPageCount = 1,
-                pageSize = if (isTablet) PageSize.Fixed(tabletPageWidth) else PageSize.Fill,
-                contentPadding = if (isTablet) {
-                    PaddingValues(horizontal = tabletPagerPadding)
-                } else {
-                    PaddingValues(0.dp)
-                },
-                pageSpacing = if (isTablet) 24.dp else 0.dp
+                beyondViewportPageCount = 1
             ) { index ->
                 when (val step = steps[index]) {
                     is OnboardingStep.Setup -> {
