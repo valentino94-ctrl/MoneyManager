@@ -15,6 +15,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.pager.HorizontalPager
+import androidx.compose.foundation.pager.PageSize
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -33,6 +34,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -71,6 +73,13 @@ fun OnboardingScreen(
     onDone: () -> Unit
 ) {
     val userSettings = LocalUserSettings.current
+    val configuration = LocalConfiguration.current
+    val isTablet = configuration.screenWidthDp >= 600
+    val tabletPageWidth = minOf(configuration.screenWidthDp - 64, 720)
+        .coerceAtLeast(1)
+        .dp
+    val tabletPagerPadding = ((configuration.screenWidthDp.dp - tabletPageWidth) / 2)
+        .coerceAtLeast(0.dp)
     
     val steps = remember {
         listOf(
@@ -110,12 +119,20 @@ fun OnboardingScreen(
             HorizontalPager(
                 state = pagerState,
                 modifier = Modifier.weight(1f),
-                userScrollEnabled = steps[pagerState.currentPage] !is OnboardingStep.Setup,
-                beyondViewportPageCount = 1
+                userScrollEnabled = isTablet || steps[pagerState.currentPage] !is OnboardingStep.Setup,
+                beyondViewportPageCount = 1,
+                pageSize = if (isTablet) PageSize.Fixed(tabletPageWidth) else PageSize.Fill,
+                contentPadding = if (isTablet) {
+                    PaddingValues(horizontal = tabletPagerPadding)
+                } else {
+                    PaddingValues(0.dp)
+                },
+                pageSpacing = if (isTablet) 24.dp else 0.dp
             ) { index ->
                 when (val step = steps[index]) {
                     is OnboardingStep.Setup -> {
                         SetupPage(
+                            isTablet = isTablet,
                             onSelectLanguage = { showLanguagePicker = true },
                             onSelectCurrency = { showCurrencyPicker = true }
                         )
@@ -179,6 +196,7 @@ fun OnboardingScreen(
                             Spacer(modifier = Modifier.height(20.dp))
                             Text(
                                 text = stringResource(page.descriptionRes),
+                                modifier = if (isTablet) Modifier.widthIn(max = 560.dp) else Modifier,
                                 style = MaterialTheme.typography.bodyLarge.copy(
                                     lineHeight = 22.sp,
                                     letterSpacing = 0.2.sp
@@ -348,23 +366,30 @@ fun OnboardingScreen(
 
 @Composable
 private fun SetupPage(
+    isTablet: Boolean,
     onSelectLanguage: () -> Unit,
     onSelectCurrency: () -> Unit
 ) {
     val userSettings = LocalUserSettings.current
     val currentLocale = remember(userSettings.languageTag) { Locale.forLanguageTag(userSettings.languageTag) }
     
-    Column(
+    Box(
         modifier = Modifier
             .fillMaxSize()
             .padding(horizontal = 24.dp),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
+        contentAlignment = Alignment.Center
     ) {
+        Column(
+            modifier = Modifier
+                .widthIn(max = if (isTablet) 560.dp else 720.dp)
+                .fillMaxWidth(),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center
+        ) {
         // Main Illustration - Pure focus on the ring and currencies
         Box(
             modifier = Modifier
-                .size(260.dp)
+                .size(if (isTablet) 220.dp else 260.dp)
                 .padding(bottom = 8.dp)
                 .clip(CircleShape),
             contentAlignment = Alignment.Center
@@ -403,7 +428,7 @@ private fun SetupPage(
             textAlign = TextAlign.Center
         )
         
-        Spacer(modifier = Modifier.height(48.dp))
+        Spacer(modifier = Modifier.height(if (isTablet) 32.dp else 48.dp))
         
         SetupCard(
             title = stringResource(R.string.language),
@@ -430,6 +455,7 @@ private fun SetupPage(
         
         // Add extra space to push content up if needed, but centering is fine
         Spacer(modifier = Modifier.height(24.dp))
+        }
     }
 }
 
@@ -517,7 +543,13 @@ private fun CurrencySelectionSheet(
         onDismiss = onDismiss,
         modifier = Modifier.fillMaxHeight(0.55f)
     ) {
-        Column(modifier = Modifier.fillMaxWidth().padding(horizontal = 20.dp)) {
+        Column(
+            modifier = Modifier
+                .widthIn(max = 600.dp)
+                .fillMaxWidth()
+                .align(Alignment.CenterHorizontally)
+                .padding(horizontal = 20.dp)
+        ) {
             Text(
                 text = stringResource(R.string.select_currency),
                 style = MaterialTheme.typography.headlineSmall,
@@ -624,7 +656,13 @@ private fun LanguageSelectionSheet(
         onDismiss = onDismiss,
         modifier = Modifier.fillMaxHeight(0.55f)
     ) {
-        Column(modifier = Modifier.fillMaxWidth().padding(horizontal = 20.dp)) {
+        Column(
+            modifier = Modifier
+                .widthIn(max = 600.dp)
+                .fillMaxWidth()
+                .align(Alignment.CenterHorizontally)
+                .padding(horizontal = 20.dp)
+        ) {
             Text(
                 text = stringResource(R.string.language),
                 style = MaterialTheme.typography.headlineSmall,
