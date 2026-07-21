@@ -507,7 +507,23 @@ private fun PrivacyPolicyDialog(
 ) {
     com.v94studio.moneymanager.ui.components.PremiumAlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(stringResource(R.string.privacy_policy)) },
+        title = {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(
+                    text = stringResource(R.string.privacy_policy),
+                    modifier = Modifier.weight(1f)
+                )
+                IconButton(onClick = onDismiss) {
+                    Icon(
+                        imageVector = Icons.Default.Close,
+                        contentDescription = stringResource(R.string.close_privacy_policy)
+                    )
+                }
+            }
+        },
         text = {
             Text(
                 text = stringResource(R.string.privacy_policy_body),
