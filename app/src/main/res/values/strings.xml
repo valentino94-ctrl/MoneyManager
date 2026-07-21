@@ -202,7 +202,6 @@
     <string name="restore_backup_subtitle" translatable="false">Import your data from a backup file</string>
 
     <string name="feedback_dialog_title">Share your Suggestions</string>
-    <string name="close_feedback_dialog" translatable="false">Close feedback form</string>
     <string name="feedback_dialog_text">We\'d love to hear how we can improve Money Manager for you.</string>
     <string name="feedback_placeholder">Tell us what\'s on your mind&#8230;</string>
     <string name="btn_send_email">Send via Email</string>

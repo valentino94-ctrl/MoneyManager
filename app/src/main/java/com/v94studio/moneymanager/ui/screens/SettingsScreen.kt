@@ -556,23 +556,7 @@ private fun FeedbackDialog(
 
     com.v94studio.moneymanager.ui.components.PremiumAlertDialog(
         onDismissRequest = onDismiss,
-        title = {
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Text(
-                    text = stringResource(R.string.feedback_dialog_title),
-                    modifier = Modifier.weight(1f)
-                )
-                IconButton(onClick = onDismiss) {
-                    Icon(
-                        imageVector = Icons.Default.Close,
-                        contentDescription = stringResource(R.string.close_feedback_dialog)
-                    )
-                }
-            }
-        },
+        title = { Text(stringResource(R.string.feedback_dialog_title)) },
         text = {
             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 Text(
@@ -594,21 +578,33 @@ private fun FeedbackDialog(
             Button(
                 onClick = { if (feedbackText.isNotBlank()) onSend(feedbackText) },
                 enabled = feedbackText.isNotBlank(),
-                modifier = Modifier.width(104.dp).height(36.dp),
+                modifier = Modifier
+                    .widthIn(min = 140.dp)
+                    .height(40.dp),
                 shape = RoundedCornerShape(50),
-                contentPadding = PaddingValues(horizontal = 10.dp)
+                contentPadding = PaddingValues(horizontal = 16.dp)
             ) {
-                Text(stringResource(R.string.btn_send_email))
+                Text(
+                    text = stringResource(R.string.btn_send_email),
+                    fontWeight = FontWeight.Bold,
+                    maxLines = 1
+                )
             }
         },
         dismissButton = {
             OutlinedButton(
                 onClick = onDismiss,
-                modifier = Modifier.width(104.dp).height(36.dp),
+                modifier = Modifier
+                    .width(104.dp)
+                    .height(40.dp),
                 shape = RoundedCornerShape(50),
-                contentPadding = PaddingValues(horizontal = 10.dp)
+                contentPadding = PaddingValues(horizontal = 16.dp)
             ) {
-                Text(stringResource(R.string.btn_cancel))
+                Text(
+                    text = stringResource(R.string.btn_cancel),
+                    fontWeight = FontWeight.Bold,
+                    maxLines = 1
+                )
             }
         }
     )
