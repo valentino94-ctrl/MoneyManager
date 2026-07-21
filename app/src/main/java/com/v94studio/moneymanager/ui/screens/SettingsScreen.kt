@@ -485,15 +485,6 @@ fun SettingsScreen(
                 try {
                     context.startActivity(intent)
                 } catch (_: Exception) { }
-            },
-            onContact = {
-                val intent = Intent(Intent.ACTION_SENDTO).apply {
-                    data = Uri.parse("mailto:v94studio.apps@gmail.com")
-                    putExtra(Intent.EXTRA_SUBJECT, "Money Manager privacy question")
-                }
-                try {
-                    context.startActivity(intent)
-                } catch (_: Exception) { }
             }
         )
     }
@@ -502,28 +493,11 @@ fun SettingsScreen(
 @Composable
 private fun PrivacyPolicyDialog(
     onDismiss: () -> Unit,
-    onOpenOnline: () -> Unit,
-    onContact: () -> Unit
+    onOpenOnline: () -> Unit
 ) {
     com.v94studio.moneymanager.ui.components.PremiumAlertDialog(
         onDismissRequest = onDismiss,
-        title = {
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Text(
-                    text = stringResource(R.string.privacy_policy),
-                    modifier = Modifier.weight(1f)
-                )
-                IconButton(onClick = onDismiss) {
-                    Icon(
-                        imageVector = Icons.Default.Close,
-                        contentDescription = stringResource(R.string.close_privacy_policy)
-                    )
-                }
-            }
-        },
+        title = { Text(stringResource(R.string.privacy_policy)) },
         text = {
             Text(
                 text = stringResource(R.string.privacy_policy_body),
@@ -535,13 +509,33 @@ private fun PrivacyPolicyDialog(
             )
         },
         confirmButton = {
-            TextButton(onClick = onOpenOnline) {
-                Text(stringResource(R.string.open_online_policy))
+            Button(
+                onClick = onOpenOnline,
+                modifier = Modifier
+                    .widthIn(min = 160.dp)
+                    .height(40.dp),
+                shape = RoundedCornerShape(50),
+                contentPadding = PaddingValues(horizontal = 16.dp)
+            ) {
+                Text(
+                    text = stringResource(R.string.open_online_policy),
+                    fontWeight = FontWeight.Bold,
+                    maxLines = 1
+                )
             }
         },
         dismissButton = {
-            TextButton(onClick = onContact) {
-                Text(stringResource(R.string.contact_v94_studio))
+            OutlinedButton(
+                onClick = onDismiss,
+                modifier = Modifier
+                    .width(104.dp)
+                    .height(40.dp),
+                shape = RoundedCornerShape(50)
+            ) {
+                Text(
+                    text = stringResource(R.string.btn_close),
+                    fontWeight = FontWeight.Bold
+                )
             }
         }
     )

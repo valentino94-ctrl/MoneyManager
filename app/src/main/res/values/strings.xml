@@ -196,8 +196,7 @@
     <string name="privacy_policy_subtitle">Read how Money Manager handles your data</string>
     <string name="privacy_policy_body" translatable="false">Effective July 21, 2026\n\nMoney Manager is developed by V94 Studio. Your accounts, transactions, categories, budgets, recurring schedules, saving goals, notes, and preferences are stored in the app\'s private storage on your device. V94 Studio does not receive, sell, or share this information and the app does not use advertising or analytics services.\n\nMoney Manager does not opt its private data into Android cloud backup or device transfer. When you choose to export or back up data, Android sends the file only to the location or app you select. You are responsible for protecting and deleting exported files.\n\nNotifications are used only for reminders you enable. Biometric credentials are checked by Android and are never available to Money Manager. The home-screen widget displays balance information when you add it.\n\nYour data remains on your device until you delete it, clear the app\'s storage, or uninstall the app. Exported files must be deleted separately.\n\nFor privacy questions, contact v94studio.apps@gmail.com.</string>
     <string name="open_online_policy" translatable="false">Open Online Policy</string>
-    <string name="contact_v94_studio" translatable="false">Contact V94 Studio</string>
-    <string name="close_privacy_policy" translatable="false">Close privacy policy</string>
+    <string name="btn_close" translatable="false">Close</string>
     <string name="restore_backup" translatable="false">Restore Backup</string>
     <string name="restore_backup_subtitle" translatable="false">Import your data from a backup file</string>
 
