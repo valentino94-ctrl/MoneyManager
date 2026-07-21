@@ -336,7 +336,10 @@ private fun AppScaffold(
         NavRoutes.Transactions.route,
         NavRoutes.Planning.route,
         NavRoutes.Settings.route
-    )
+    ) || (navigationType != MoneyNavigationType.BOTTOM_NAVIGATION && currentRoute in listOf(
+        NavRoutes.Accounts.route,
+        NavRoutes.Categories.route
+    ))
 
     Row(modifier = Modifier.fillMaxSize()) {
         if (showUi && navigationType == MoneyNavigationType.PERMANENT_DRAWER) {
@@ -726,22 +729,30 @@ private fun MainContent(
                         navController = navController,
                         startDestination = NavRoutes.Dashboard.route,
                         enterTransition = {
-                            if (shouldCrossfade(initialState.destination.route, targetState.destination.route)) {
+                            val from = initialState.destination.route
+                            val to = targetState.destination.route
+                            if (shouldCrossfade(from, to)) {
                                 fadeIn(tween(120))
                             } else EnterTransition.None
                         },
                         exitTransition = {
-                            if (shouldCrossfade(initialState.destination.route, targetState.destination.route)) {
+                            val from = initialState.destination.route
+                            val to = targetState.destination.route
+                            if (shouldCrossfade(from, to)) {
                                 fadeOut(tween(120))
                             } else ExitTransition.None
                         },
                         popEnterTransition = {
-                            if (shouldCrossfade(initialState.destination.route, targetState.destination.route)) {
+                            val from = initialState.destination.route
+                            val to = targetState.destination.route
+                            if (shouldCrossfade(from, to)) {
                                 fadeIn(tween(120))
                             } else EnterTransition.None
                         },
                         popExitTransition = {
-                            if (shouldCrossfade(initialState.destination.route, targetState.destination.route)) {
+                            val from = initialState.destination.route
+                            val to = targetState.destination.route
+                            if (shouldCrossfade(from, to)) {
                                 fadeOut(tween(120))
                             } else ExitTransition.None
                         }
