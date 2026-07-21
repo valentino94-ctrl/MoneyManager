@@ -1,0 +1,297 @@
+<resources>
+    <string name="app_name">记账管家</string>
+
+    <!-- Navigation -->
+    <string name="nav_dashboard">控制台</string>
+    <string name="nav_activity">明细</string>
+    <string name="nav_planning">规划</string>
+    <string name="nav_settings">设置</string>
+
+    <!-- Titles -->
+    <string name="title_transaction">交易</string>
+    <string name="title_recurring">周期</string>
+    <string name="title_accounts">账户</string>
+    <string name="title_categories">分类</string>
+    <string name="title_budgets">预算</string>
+    <string name="title_saving_goals">储蓄目标</string>
+    <string name="subtitle_saving_goals">宏大梦想，积少成多</string>
+
+    <string name="tab_budgeting">预算管理</string>
+    <string name="tab_saving_goals">目标管理</string>
+
+    <string name="msg_no_goals">暂无目标</string>
+    <string name="msg_goals_hint">开始为买车、度假或应急基金存钱。</string>
+    <string name="btn_create_first_goal">创建第一个目标</string>
+    <string name="label_target_with_amount">目标: %1$s</string>
+    <string name="label_percent_complete">已完成 %1$d%%</string>
+    <string name="label_remaining_to_go">还差 %1$s</string>
+    <string name="btn_add_funds">存入资金</string>
+    <string name="title_new_goal">新储蓄目标</string>
+    <string name="hint_goal_name">你在为什么存钱？</string>
+    <string name="hint_target_amount">目标金额</string>
+    <string name="title_add_funds_to">存入资金至 %1$s</string>
+    <string name="hint_contribution">存入金额</string>
+    <string name="title_recurring_schedules">周期性支出</string>
+    <string name="subtitle_recurring">自动管理常规账单和收入</string>
+    <string name="title_add_schedule">添加新周期项</string>
+    <string name="title_upcoming_payments">即将到来的付款</string>
+
+    <string name="label_repeat_days">重复频率（天）</string>
+    <string name="label_next_run">下次执行日期</string>
+    <string name="label_time">时间</string>
+    <string name="btn_pay_now">立即入账</string>
+    <string name="btn_add_recurring">添加周期计划</string>
+    <string name="label_every_x_days">每 %1$d 天</string>
+    <string name="label_next_date">下次: %1$s</string>
+    <string name="title_add_account">新建账户</string>
+    <string name="label_account_name">账户名称</string>
+    <string name="label_account_type_hint">账户类型（例如：银行、现金）</string>
+    <string name="label_starting_balance">初始余额</string>
+    <string name="label_existing_accounts">现有账户</string>
+    <string name="error_enter_account_name">请输入账户名称</string>
+    <string name="title_delete_account">删除账户？</string>
+    <string name="msg_delete_account_confirm">确定要删除“%1$s”吗？此操作无法撤销。</string>
+    <string name="title_edit_account">编辑账户</string>
+    <string name="label_account_type">账户类型</string>
+    <string name="title_overview">概览</string>
+    <string name="title_upcoming">待办</string>
+    <string name="title_savings">储蓄</string>
+    <string name="title_charts">图表</string>
+    <string name="title_insights">智能洞察</string>
+    <string name="title_budget_analytics">预算分析</string>
+
+    <string name="subtitle_quick_snapshot">快速快照</string>
+    <string name="subtitle_bills_income">账单和计划收入</string>
+    <string name="subtitle_saving_progress">目标进度</string>
+    <string name="subtitle_spending_patterns">消费模式</string>
+    <string name="subtitle_helpful_signals">有用信号</string>
+    <string name="subtitle_track_allocate">追踪、分配、对比</string>
+    <string name="subtitle_budget_limits">规划每月消费限额</string>
+
+    <string name="label_total_overview">总体概览</string>
+    <string name="label_total_budgeted">预算总额</string>
+    <string name="label_tracking_period">统计周期</string>
+    <string name="label_set_category_budget">设置分类预算</string>
+    <string name="label_active_budgets">当前预算</string>
+    <string name="label_rolling_budget">%1$d 天滚动预算</string>
+    <string name="label_rolling_window">应用于 %1$d 天滚动窗口</string>
+    <string name="label_left">剩余</string>
+    <string name="label_over">超出</string>
+    <string name="label_category">分类</string>
+    <string name="label_monthly_budget_amount">每月预算金额</string>
+    <string name="label_recurring_type">周期类型</string>
+    <string name="label_manage">管理</string>
+    <string name="label_repeat_every_days">重复频率（天）</string>
+    <string name="label_quick_select">快速选择</string>
+    <string name="label_note_optional">备注（选填）</string>
+    <string name="label_date">日期</string>
+    <string name="label_first_next_run_date">首次/下次执行日期</string>
+    <string name="label_new_category">新分类</string>
+    <string name="title_add_new_category">添加新分类</string>
+    <string name="label_category_name">分类名称</string>
+    <string name="label_existing_categories">现有分类</string>
+    <string name="title_edit_category">编辑分类</string>
+    <string name="title_delete_category">删除分类？</string>
+    <string name="msg_delete_category_confirm">确定要删除 \"%1$s\" 吗？此操作无法撤销。</string>
+    <string name="error_enter_valid_days">请输入有效天数</string>
+    <string name="msg_create_category_desc">为 %1$s 创建一个新分类。</string>
+    <string name="label_total_spent">总支出</string>
+    <string name="label_under_status">未超</string>
+    <string name="label_over_status">超出</string>
+    <string name="label_new_action">新建</string>
+    <string name="label_amount_field">金额</string>
+
+    <string name="label_total_balance">总余额</string>
+    <string name="label_month_income">本月收入</string>
+    <string name="label_month_expenses">本月支出</string>
+    <string name="label_savings_rate">储蓄率</string>
+    <string name="title_filters">筛选</string>
+    <string name="label_transaction_type">交易类型</string>
+    <string name="label_time_period">时间范围</string>
+    <string name="label_x_days_filter">%1$d 天</string>
+    <string name="label_sort_order">排序方式</string>
+    <string name="label_date_sort">日期</string>
+    <string name="label_amount_sort">金额</string>
+    <string name="label_descending">降序</string>
+    <string name="label_ascending">升序</string>
+    <string name="hint_search_transactions">搜索交易记录&#8230;</string>
+
+    <string name="label_total">总计</string>
+    <string name="label_all">全部</string>
+    <string name="label_spent">已花</string>
+    <string name="label_remaining">剩余</string>
+    <string name="label_target">目标</string>
+    <string name="label_actual">实际</string>
+    <string name="label_income">收入</string>
+    <string name="label_expenses">支出</string>
+    <string name="label_over_limit">超支</string>
+    <string name="label_of_total">占比</string>
+    <string name="label_used">已用 %1$s</string>
+    <string name="label_no_data">暂无数据</string>
+
+    <string name="chart_income_expense_trend">收支趋势</string>
+    <string name="chart_category_breakdown">分类分布</string>
+    <string name="chart_monthly_comparison">月度对比</string>
+    <string name="chart_on_track">进度正常吗？</string>
+    <string name="chart_actual_vs_target">实际 vs 目标</string>
+    <string name="chart_budget_allocation">预算分配</string>
+    <string name="chart_monthly_trends">月度预算趋势</string>
+    <string name="chart_quick_look">快速预览</string>
+
+    <string name="msg_no_recurring">未来 30 天内无周期性活动</string>
+    <string name="msg_add_recurring_hint">添加房租、工资、订阅等以查看预告。</string>
+    <string name="msg_no_budgets">暂无预算</string>
+    <string name="msg_unlock_to_view">解锁以查看您的财务数据</string>
+    <string name="msg_locked">记账管家已锁定</string>
+
+    <string name="msg_no_transactions">未找到交易记录</string>
+    <string name="msg_adjust_filters">尝试调整搜索或筛选条件</string>
+
+    <string name="btn_unlock">立即解锁</string>
+
+    <string name="label_today">今天</string>
+    <string name="label_tomorrow">明天</string>
+
+    <!-- Settings -->
+    <string name="settings_subtitle">定制您的体验</string>
+    <string name="section_appearance">外观</string>
+    <string name="theme_mode">主题模式</string>
+    <string name="theme_system">跟随系统</string>
+    <string name="theme_light">浅色</string>
+    <string name="theme_dark">深色</string>
+
+    <string name="section_security">安全与隐私</string>
+    <string name="biometric_lock">生物识别锁定</string>
+    <string name="biometric_subtitle">需要指纹或面部识别</string>
+    <string name="privacy_mode">隐私模式</string>
+    <string name="privacy_subtitle">在控制台和列表中隐藏余额</string>
+
+    <string name="section_automation">自动化</string>
+    <string name="auto_approve">自动入账</string>
+    <string name="auto_approve_subtitle">在到期日自动记录周期项</string>
+
+    <string name="section_regional">区域设置</string>
+    <string name="currency">币种</string>
+    <string name="language">语言</string>
+    <string name="select_currency">选择币种</string>
+    <string name="search_currency_hint">搜索币种名称或代码</string>
+
+    <string name="section_planning_settings">规划设置</string>
+    <string name="budget_window">预算周期</string>
+    <string name="window_week">周</string>
+    <string name="window_month">月</string>
+    <string name="window_quarter">季</string>
+
+    <string name="section_management">管理</string>
+    <string name="manage_accounts">管理账户</string>
+    <string name="manage_accounts_subtitle">银行卡、钱包、现金</string>
+    <string name="manage_categories">管理分类</string>
+    <string name="manage_categories_subtitle">定制支出和收入标签</string>
+
+    <string name="section_support">支持与反馈</string>
+    <string name="send_feedback">发送反馈</string>
+    <string name="send_feedback_subtitle">分享建议或报告问题</string>
+    <string name="export_csv">导出 CSV</string>
+    <string name="export_csv_subtitle">下载您的交易记录</string>
+    <string name="export_database">导出备份</string>
+    <string name="export_database_subtitle">保存所有数据的完整备份</string>
+    <string name="privacy_policy">隐私政策</string>
+    <string name="privacy_policy_subtitle">查看我们对您隐私的承诺</string>
+
+    <string name="feedback_dialog_title">分享您的建议</string>
+    <string name="feedback_dialog_text">我们很想知道如何为您改进记账管家。</string>
+    <string name="feedback_placeholder">告诉我们您的想法&#8230;</string>
+    <string name="btn_send_email">发送邮件</string>
+    <string name="btn_cancel">取消</string>
+    <string name="btn_ok">确定</string>
+
+    <!-- Common Actions -->
+    <string name="action_save">保存</string>
+    <string name="action_update">更新</string>
+    <string name="action_delete">删除</string>
+    <string name="action_edit">编辑</string>
+    <string name="action_create">创建</string>
+    <string name="action_add">添加</string>
+    <string name="action_done">完成</string>
+    <string name="action_open">打开</string>
+    <string name="action_reset_all">全部重置</string>
+    <string name="action_show_results">显示结果</string>
+
+    <!-- FAB Labels -->
+    <string name="fab_add_transaction">添加交易</string>
+    <string name="fab_add_category">添加分类</string>
+    <string name="fab_add_account">添加账户</string>
+
+    <!-- Loading/Startup -->
+    <string name="loading_slogan">安全 • 简约 • 智能</string>
+
+    <!-- Categories -->
+    <string name="cat_salary">工资</string>
+    <string name="cat_freelance">自由职业</string>
+    <string name="cat_food">饮食</string>
+    <string name="cat_rent">房租</string>
+    <string name="cat_transport">交通</string>
+    <string name="cat_utilities">水电煤</string>
+    <string name="cat_shopping">购物</string>
+    <string name="cat_uncategorized">未分类</string>
+    <string name="onboarding_welcome">欢迎使用记账管家</string>
+    <string name="onboarding_track_title">追踪一切</string>
+    <string name="onboarding_track_desc">在一个安静优美的地方管理您的账户和现金。</string>
+    <string name="onboarding_budget_title">智能预算</string>
+    <string name="onboarding_budget_desc">按分类设置每月支出限额。</string>
+    <string name="onboarding_insights_title">财务洞察</string>
+    <string name="onboarding_insights_desc">自动获取您的消费习惯分析。</string>
+    <string name="btn_get_started">开始使用</string>
+    <string name="btn_next">下一步</string>
+    <string name="btn_skip">跳过</string>
+
+    <!-- Success/Error Messages -->
+    <string name="csv_saved">已保存至下载目录</string>
+    <string name="csv_failed">保存 CSV 失败</string>
+    <string name="error_invalid_amount">请输入有效金额</string>
+    <string name="error_invalid_name">请输入名称</string>
+    <string name="error_select_category">请选择分类</string>
+
+    <!-- Accessibility Descriptions -->
+    <string name="cd_delete">删除</string>
+    <string name="cd_edit">编辑</string>
+    <string name="cd_search">搜索</string>
+    <string name="cd_close">关闭</string>
+    <string name="cd_back">返回</string>
+    <string name="cd_add">添加</string>
+    <string name="cd_filter">筛选</string>
+    <string name="cd_skip">跳过</string>
+    <string name="cd_pay_now">立即入账</string>
+    <string name="cd_reset">重置</string>
+    <string name="cd_next">下一步</string>
+
+    <!-- Insights -->
+    <string name="insight_tone_saving">省钱趋势</string>
+    <string name="insight_tone_spending">消费预警</string>
+    <string name="insight_tone_good">趋势良好</string>
+    <string name="insight_tone_watch">注意</string>
+    <string name="insight_tone_start">开始</string>
+
+    <string name="insight_monthly_compare">本月同期消费比上月 %2$s 了 %1$s。</string>
+    <string name="insight_savings_positive">本月您存下了收入的 %1$s。不错的缓冲。</string>
+    <string name="insight_savings_neutral">本月您存下了收入的 %1$s。细微调整可进一步提升。</string>
+    <string name="insight_savings_negative">本月支出超过了收入。请先检查最大的消费分类。</string>
+    <string name="insight_7day_compare">您过去 7 天的消费比前 7 天 %2$s 了 %1$s。</string>
+    <string name="insight_budget_over">您已超支 %1$s。</string>
+    <string name="insight_budget_near">在达到预算限额前，您还剩余 %1$s。</string>
+    <string name="insight_budget_normal">您已使用预算的 %1$s。</string>
+    <string name="insight_top_spend">%1$s 是主要支出项，共计 %2$s。</string>
+    <string name="insight_upcoming_item">%1$s 将于 %2$s 到期。</string>
+    <string name="insight_empty_state">添加交易、预算和周期项以解锁洞察。</string>
+
+    <string name="label_more">多</string>
+    <string name="label_less">少</string>
+
+    <string name="tab_trend">趋势</string>
+    <string name="tab_categories">分类</string>
+    <string name="tab_monthly">月度</string>
+    <string name="tab_line">曲线</string>
+    <string name="tab_donut">圆环</string>
+    <string name="tab_bar">柱状</string>
+    <string name="tab_progress">进度</string>
+</resources>

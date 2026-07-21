@@ -1,0 +1,298 @@
+<resources>
+    <string name="app_name">Gestor de Dinero</string>
+
+    <!-- Navigation -->
+    <string name="nav_dashboard">Panel</string>
+    <string name="nav_activity">Historial</string>
+    <string name="nav_planning">Planificación</string>
+    <string name="nav_settings">Ajustes</string>
+
+    <!-- Titles -->
+    <string name="title_transaction">Transacción</string>
+    <string name="title_recurring">Recurrente</string>
+    <string name="title_accounts">Cuentas</string>
+    <string name="title_categories">Categorías</string>
+    <string name="title_budgets">Presupuestos</string>
+    <string name="title_saving_goals">Metas de ahorro</string>
+    <string name="subtitle_saving_goals">Sueña en grande, ahorra poco a poco</string>
+
+    <string name="tab_budgeting">Presupuesto</string>
+    <string name="tab_saving_goals">Metas</string>
+
+    <string name="msg_no_goals">No hay metas todavía</string>
+    <string name="msg_goals_hint">Empieza a ahorrar para un coche nuevo, vacaciones o un fondo de emergencia.</string>
+    <string name="btn_create_first_goal">Crear primera meta</string>
+    <string name="label_target_with_amount">Objetivo: %1$s</string>
+    <string name="label_percent_complete">%1$d%% completado</string>
+    <string name="label_remaining_to_go">Faltan %1$s</string>
+    <string name="btn_add_funds">Añadir fondos</string>
+    <string name="title_new_goal">Nueva meta de ahorro</string>
+    <string name="hint_goal_name">¿Para qué estás ahorrando?</string>
+    <string name="hint_target_amount">Monto objetivo</string>
+    <string name="title_add_funds_to">Añadir fondos a %1$s</string>
+    <string name="hint_contribution">Monto a contribuir</string>
+    <string name="title_recurring_schedules">Programas recurrentes</string>
+    <string name="subtitle_recurring">Automatiza tus facturas e ingresos regulares</string>
+    <string name="title_add_schedule">Añadir nuevo programa</string>
+    <string name="title_upcoming_payments">Próximos pagos</string>
+
+    <string name="label_repeat_days">Repetir cada (días)</string>
+    <string name="label_next_run">Próxima ejecución</string>
+    <string name="label_time">Hora</string>
+    <string name="btn_pay_now">Pagar ahora</string>
+    <string name="btn_add_recurring">Añadir programa recurrente</string>
+    <string name="label_every_x_days">Cada %1$d días</string>
+    <string name="label_next_date">Próximo: %1$s</string>
+    <string name="title_add_account">Nueva cuenta</string>
+    <string name="label_account_name">Nombre de la cuenta</string>
+    <string name="label_account_type_hint">Tipo de cuenta (ej. Banco, Efectivo)</string>
+    <string name="label_starting_balance">Saldo inicial</string>
+    <string name="label_existing_accounts">Cuentas existentes</string>
+    <string name="error_enter_account_name">Ingresa un nombre de cuenta</string>
+    <string name="title_delete_account">¿Eliminar cuenta?</string>
+    <string name="msg_delete_account_confirm">¿Estás seguro de que quieres eliminar \"%1$s\"? Esta acción no se puede deshacer.</string>
+    <string name="title_edit_account">Editar cuenta</string>
+    <string name="label_account_type">Tipo de cuenta</string>
+
+    <string name="title_overview">Visión general</string>
+    <string name="title_upcoming">Próximo</string>
+    <string name="title_savings">Ahorros</string>
+    <string name="title_charts">Gráficos</string>
+    <string name="title_insights">Consejos inteligentes</string>
+    <string name="title_budget_analytics">Análisis de presupuesto</string>
+
+    <string name="subtitle_quick_snapshot">Resumen rápido</string>
+    <string name="subtitle_bills_income">Facturas e ingresos previstos</string>
+    <string name="subtitle_saving_progress">Tu progreso hacia las metas</string>
+    <string name="subtitle_spending_patterns">Patrones de gasto</string>
+    <string name="subtitle_helpful_signals">Señales útiles</string>
+    <string name="subtitle_track_allocate">Seguir, asignar, comparar</string>
+    <string name="subtitle_budget_limits">Planifica tus límites de gasto mensuales</string>
+
+    <string name="label_total_overview">Resumen Total</string>
+    <string name="label_total_budgeted">Total Presupuestado</string>
+    <string name="label_tracking_period">Periodo de Seguimiento</string>
+    <string name="label_set_category_budget">Establecer Presupuesto por Categoría</string>
+    <string name="label_active_budgets">Presupuestos Activos</string>
+    <string name="label_rolling_budget">Presupuesto rodante de %1$d días</string>
+    <string name="label_rolling_window">Aplicando a la ventana rodante de %1$d días</string>
+    <string name="label_left">restante</string>
+    <string name="label_over">exceso</string>
+    <string name="label_category">Categoría</string>
+    <string name="label_monthly_budget_amount">Monto del Presupuesto Mensual</string>
+    <string name="label_recurring_type">Tipo de Recurrencia</string>
+    <string name="label_manage">Gestionar</string>
+    <string name="label_repeat_every_days">Repetir cada (días)</string>
+    <string name="label_quick_select">Selección Rápida</string>
+    <string name="label_note_optional">Nota (Opcional)</string>
+    <string name="label_date">Fecha</string>
+    <string name="label_first_next_run_date">Fecha de primera/próxima ejecución</string>
+    <string name="label_new_category">Nueva categoría</string>
+    <string name="title_add_new_category">Añadir nueva categoría</string>
+    <string name="label_category_name">Nombre de la categoría</string>
+    <string name="label_existing_categories">Categorías existentes</string>
+    <string name="title_edit_category">Editar categoría</string>
+    <string name="title_delete_category">¿Eliminar categoría?</string>
+    <string name="msg_delete_category_confirm">¿Estás seguro de que quieres eliminar \"%1$s\"? Esta acción no se puede deshacer.</string>
+    <string name="error_enter_valid_days">Ingresa días válidos</string>
+    <string name="msg_create_category_desc">Crear una nueva категория para %1$s.</string>
+    <string name="label_total_spent">Total Gastado</string>
+    <string name="label_under_status">Bajo</string>
+    <string name="label_over_status">Sobre</string>
+    <string name="label_new_action">Nuevo</string>
+    <string name="label_amount_field">Monto</string>
+
+    <string name="label_total_balance">Saldo total</string>
+    <string name="label_month_income">Ingresos del mes</string>
+    <string name="label_month_expenses">Gastos del mes</string>
+    <string name="label_savings_rate">Tasa de ahorro</string>
+    <string name="title_filters">Filtros</string>
+    <string name="label_transaction_type">Tipo de transacción</string>
+    <string name="label_time_period">Periodo de tiempo</string>
+    <string name="label_x_days_filter">%1$d días</string>
+    <string name="label_sort_order">Orden y clasificación</string>
+    <string name="label_date_sort">Fecha</string>
+    <string name="label_amount_sort">Monto</string>
+    <string name="label_descending">Descendente</string>
+    <string name="label_ascending">Ascendente</string>
+    <string name="hint_search_transactions">Buscar transacciones&#8230;</string>
+
+    <string name="label_total">Total</string>
+    <string name="label_all">Todo</string>
+    <string name="label_spent">Gastado</string>
+    <string name="label_remaining">Restante</string>
+    <string name="label_target">Objetivo</string>
+    <string name="label_actual">Real</string>
+    <string name="label_income">Ingresos</string>
+    <string name="label_expenses">Gastos</string>
+    <string name="label_over_limit">Exceso</string>
+    <string name="label_of_total">del total</string>
+    <string name="label_used">%1$s utilizado</string>
+    <string name="label_no_data">Sin datos aún</string>
+
+    <string name="chart_income_expense_trend">Tendencia Ingresos vs Gastos</string>
+    <string name="chart_category_breakdown">Desglose por categoría</string>
+    <string name="chart_monthly_comparison">Comparación mensual</string>
+    <string name="chart_on_track">¿Voy por buen camino?</string>
+    <string name="chart_actual_vs_target">Real vs Objetivo</string>
+    <string name="chart_budget_allocation">Asignación de presupuesto</string>
+    <string name="chart_monthly_trends">Tendencias de presupuesto</string>
+    <string name="chart_quick_look">Vistazo rápido</string>
+
+    <string name="msg_no_recurring">Sin actividad recurrente en los próximos 30 días</string>
+    <string name="msg_add_recurring_hint">Añade alquiler, salario, suscripciones y facturas para ver qué viene.</string>
+    <string name="msg_no_budgets">Sin presupuestos aún</string>
+    <string name="msg_unlock_to_view">Desbloquea para ver tus datos financieros</string>
+    <string name="msg_locked">Money Manager está bloqueado</string>
+
+    <string name="msg_no_transactions">No se encontraron transacciones</string>
+    <string name="msg_adjust_filters">Intenta ajustar tu búsqueda o filtros</string>
+
+    <string name="btn_unlock">Desbloquear ahora</string>
+
+    <string name="label_today">Hoy</string>
+    <string name="label_tomorrow">Mañana</string>
+
+    <!-- Settings -->
+    <string name="settings_subtitle">Personaliza tu experiencia</string>
+    <string name="section_appearance">Apariencia</string>
+    <string name="theme_mode">Modo de tema</string>
+    <string name="theme_system">Sistema</string>
+    <string name="theme_light">Claro</string>
+    <string name="theme_dark">Oscuro</string>
+
+    <string name="section_security">Security &amp; Privacy</string>
+    <string name="biometric_lock">Bloqueo biométrico</string>
+    <string name="biometric_subtitle">Requiere huella dactilar o Face ID</string>
+    <string name="privacy_mode">Modo privacidad</string>
+    <string name="privacy_subtitle">Ocultar saldos en el panel</string>
+
+    <string name="section_automation">Automatización</string>
+    <string name="auto_approve">Aprobación automática</string>
+    <string name="auto_approve_subtitle">Registrar pagos en la fecha prevista</string>
+
+    <string name="section_regional">Regional</string>
+    <string name="currency">Moneda</string>
+    <string name="language">Idioma</string>
+    <string name="select_currency">Seleccionar moneda</string>
+    <string name="search_currency_hint">Buscar nombre o código de moneda</string>
+
+    <string name="section_planning_settings">Planificación</string>
+    <string name="budget_window">Periodo de presupuesto</string>
+    <string name="window_week">Semana</string>
+    <string name="window_month">Mes</string>
+    <string name="window_quarter">Trimestre</string>
+
+    <string name="section_management">Gestión</string>
+    <string name="manage_accounts">Gestionar cuentas</string>
+    <string name="manage_accounts_subtitle">Bancos, carteras, efectivo</string>
+    <string name="manage_categories">Gestionar categorías</string>
+    <string name="manage_categories_subtitle">Personalizar etiquetas de gastos</string>
+
+    <string name="section_support">Soporte y comentarios</string>
+    <string name="send_feedback">Enviar comentarios</string>
+    <string name="send_feedback_subtitle">Comparte tus sugerencias o informa un problema</string>
+    <string name="export_csv">Exportar en CSV</string>
+    <string name="export_csv_subtitle">Descargar historial de transacciones</string>
+    <string name="export_database">Exportar copia de seguridad</string>
+    <string name="export_database_subtitle">Guardar todos los datos</string>
+    <string name="privacy_policy">Política de privacidad</string>
+    <string name="privacy_policy_subtitle">Ver nuestro compromiso con tus datos</string>
+
+    <string name="feedback_dialog_title">Comparte tus sugerencias</string>
+    <string name="feedback_dialog_text">Nos encantaría saber cómo mejorar Money Manager para ti.</string>
+    <string name="feedback_placeholder">Cuéntanos qué tienes en mente&#8230;</string>
+    <string name="btn_send_email">Enviar por e-mail</string>
+    <string name="btn_cancel">Cancelar</string>
+    <string name="btn_ok">OK</string>
+
+    <!-- Common Actions -->
+    <string name="action_save">Guardar</string>
+    <string name="action_update">Actualizar</string>
+    <string name="action_delete">Eliminar</string>
+    <string name="action_edit">Editar</string>
+    <string name="action_create">Crear</string>
+    <string name="action_add">Añadir</string>
+    <string name="action_done">Hecho</string>
+    <string name="action_open">Abrir</string>
+    <string name="action_reset_all">Restablecer todo</string>
+    <string name="action_show_results">Mostrar resultados</string>
+
+    <!-- FAB Labels -->
+    <string name="fab_add_transaction">Añadir transacción</string>
+    <string name="fab_add_category">Añadir categoría</string>
+    <string name="fab_add_account">Añadir cuenta</string>
+
+    <!-- Loading/Startup -->
+    <string name="loading_slogan">Seguro • Simple • Inteligente</string>
+
+    <!-- Categories -->
+    <string name="cat_salary">Salario</string>
+    <string name="cat_freelance">Freelance</string>
+    <string name="cat_food">Comida</string>
+    <string name="cat_rent">Alquiler</string>
+    <string name="cat_transport">Transporte</string>
+    <string name="cat_utilities">Servicios</string>
+    <string name="cat_shopping">Compras</string>
+    <string name="cat_uncategorized">Sin categoría</string>
+    <string name="onboarding_welcome">Bienvenido a Money Manager</string>
+    <string name="onboarding_track_title">Rastrea todo</string>
+    <string name="onboarding_track_desc">Gestiona tus cuentas y efectivo en un solo lugar tranquilo.</string>
+    <string name="onboarding_budget_title">Presupuesto inteligente</string>
+    <string name="onboarding_budget_desc">Establece límites de gasto mensuales por categoría.</string>
+    <string name="onboarding_insights_title">Consejos financieros</string>
+    <string name="onboarding_insights_desc">Obtén información automática sobre tus hábitos de gasto.</string>
+    <string name="btn_get_started">Empezar</string>
+    <string name="btn_next">Siguiente</string>
+    <string name="btn_skip">Omitir</string>
+
+    <!-- Success/Error Messages -->
+    <string name="csv_saved">Guardado en Descargas</string>
+    <string name="csv_failed">Error al exportar CSV</string>
+    <string name="error_invalid_amount">Ingresa un monto válido</string>
+    <string name="error_invalid_name">Ingresa un nombre</string>
+    <string name="error_select_category">Por favor selecciona una categoría</string>
+
+    <!-- Accessibility Descriptions -->
+    <string name="cd_delete">Eliminar</string>
+    <string name="cd_edit">Editar</string>
+    <string name="cd_search">Buscar</string>
+    <string name="cd_close">Cerrar</string>
+    <string name="cd_back">Atrás</string>
+    <string name="cd_add">Añadir</string>
+    <string name="cd_filter">Filtrer</string>
+    <string name="cd_skip">Omitir</string>
+    <string name="cd_pay_now">Pagar ahora</string>
+    <string name="cd_reset">Restablecer</string>
+    <string name="cd_next">Siguiente</string>
+
+    <!-- Insights -->
+    <string name="insight_tone_saving">Tendencia de ahorro</string>
+    <string name="insight_tone_spending">Alerta de gasto</string>
+    <string name="insight_tone_good">Buena tendencia</string>
+    <string name="insight_tone_watch">Observar</string>
+    <string name="insight_tone_start">Empezar</string>
+
+    <string name="insight_monthly_compare">Has gastado un %1$s %2$s que el mes pasado a estas alturas.</string>
+    <string name="insight_savings_positive">Has ahorrado el %1$s de tus ingresos este mes. Buen colchón.</string>
+    <string name="insight_savings_neutral">Has ahorrado el %1$s de tus ingresos este mes. Pequeños cambios pueden mejorar esto.</string>
+    <string name="insight_savings_negative">Los gastos superan a los ingresos este mes. Revisa primero las categorías más grandes.</string>
+    <string name="insight_7day_compare">Has gastado un %1$s %2$s que en los 7 días anteriores.</string>
+    <string name="insight_budget_over">Estás %1$s por encima del presupuesto.</string>
+    <string name="insight_budget_near">Te quedan %1$s antes de alcanzar tu presupuesto.</string>
+    <string name="insight_budget_normal">Estás usando el %1$s de tu presupuesto.</string>
+    <string name="insight_top_spend">%1$s lidera el gasto con %2$s.</string>
+    <string name="insight_upcoming_item">%1$s vence %2$s.</string>
+    <string name="insight_empty_state">Añade transacciones, presupuestos y elementos recurrentes para desbloquear consejos.</string>
+
+    <string name="label_more">más</string>
+    <string name="label_less">menos</string>
+
+    <string name="tab_trend">Tendencia</string>
+    <string name="tab_categories">Categorías</string>
+    <string name="tab_monthly">Mensual</string>
+    <string name="tab_line">Línea</string>
+    <string name="tab_donut">Donut</string>
+    <string name="tab_bar">Barra</string>
+    <string name="tab_progress">Progreso</string>
+</resources>

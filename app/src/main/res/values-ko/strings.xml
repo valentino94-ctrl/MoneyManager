@@ -1,0 +1,297 @@
+<resources>
+    <string name="app_name">머니 매니저</string>
+
+    <!-- Navigation -->
+    <string name="nav_dashboard">대시보드</string>
+    <string name="nav_activity">내역</string>
+    <string name="nav_planning">계획</string>
+    <string name="nav_settings">설정</string>
+
+    <!-- Titles -->
+    <string name="title_transaction">거래</string>
+    <string name="title_recurring">정기 내역</string>
+    <string name="title_accounts">계좌</string>
+    <string name="title_categories">카테고리</string>
+    <string name="title_budgets">예산</string>
+    <string name="title_saving_goals">저축 목표</string>
+    <string name="subtitle_saving_goals">큰 꿈을 위해, 꾸준히 저축하세요</string>
+
+    <string name="tab_budgeting">예산 관리</string>
+    <string name="tab_saving_goals">목표 관리</string>
+
+    <string name="msg_no_goals">아직 목표가 없습니다</string>
+    <string name="msg_goals_hint">자동차, 휴가 또는 비상금을 위한 저축을 시작해보세요.</string>
+    <string name="btn_create_first_goal">첫 목표 만들기</string>
+    <string name="label_target_with_amount">목표: %1$s</string>
+    <string name="label_percent_complete">%1$d%% 완료</string>
+    <string name="label_remaining_to_go">%1$s 남음</string>
+    <string name="btn_add_funds">금액 추가</string>
+    <string name="title_new_goal">새 저축 목표</string>
+    <string name="hint_goal_name">무엇을 위해 저축하시나요?</string>
+    <string name="hint_target_amount">목표 금액</string>
+    <string name="title_add_funds_to">%1$s에 금액 추가</string>
+    <string name="hint_contribution">추가할 금액</string>
+    <string name="title_recurring_schedules">정기 일정</string>
+    <string name="subtitle_recurring">정기적인 청구서와 수입을 자동화하세요</string>
+    <string name="title_add_schedule">새 일정 추가</string>
+    <string name="title_upcoming_payments">예정된 결제</string>
+
+    <string name="label_repeat_days">반복 주기 (일)</string>
+    <string name="label_next_run">다음 실행일</string>
+    <string name="label_time">시간</string>
+    <string name="btn_pay_now">지금 결제</string>
+    <string name="btn_add_recurring">정기 일정 추가</string>
+    <string name="label_every_x_days">%1$d일마다</string>
+    <string name="label_next_date">다음: %1$s</string>
+    <string name="title_add_account">새 계정</string>
+    <string name="label_account_name">계정 이름</string>
+    <string name="label_account_type_hint">계정 유형(예: 은행, 현금)</string>
+    <string name="label_starting_balance">시작 잔액</string>
+    <string name="label_existing_accounts">기존 계정</string>
+    <string name="error_enter_account_name">계정 이름을 입력하세요</string>
+    <string name="title_delete_account">계정을 삭제할까요?</string>
+    <string name="msg_delete_account_confirm">\"%1$s\"을(를) 삭제하시겠습니까? 이 작업은 취소할 수 없습니다.</string>
+    <string name="title_edit_account">계정 편집</string>
+    <string name="label_account_type">계정 유형</string>
+    <string name="title_overview">개요</string>
+    <string name="title_upcoming">예정</string>
+    <string name="title_savings">저축</string>
+    <string name="title_charts">차트</string>
+    <string name="title_insights">스마트 분석</string>
+    <string name="title_budget_analytics">예산 분석</string>
+
+    <string name="subtitle_quick_snapshot">빠른 요약</string>
+    <string name="subtitle_bills_income">청구서 및 예정 수입</string>
+    <string name="subtitle_saving_progress">목표 달성 현황</string>
+    <string name="subtitle_spending_patterns">소비 패턴</string>
+    <string name="subtitle_helpful_signals">유용한 신호</string>
+    <string name="subtitle_track_allocate">추적, 할당, 비교</string>
+    <string name="subtitle_budget_limits">월별 지출 한도 계획</string>
+
+    <string name="label_total_overview">전체 개요</string>
+    <string name="label_total_budgeted">총 예산</string>
+    <string name="label_tracking_period">추적 기간</string>
+    <string name="label_set_category_budget">카테고리 예산 설정</string>
+    <string name="label_active_budgets">활성 예산</string>
+    <string name="label_rolling_budget">%1$d일 기준 예산</string>
+    <string name="label_rolling_window">%1$d일 기준 기간에 적용</string>
+    <string name="label_left">남음</string>
+    <string name="label_over">초과</string>
+    <string name="label_category">카테고리</string>
+    <string name="label_monthly_budget_amount">월 예산 금액</string>
+    <string name="label_recurring_type">반복 유형</string>
+    <string name="label_manage">관리</string>
+    <string name="label_repeat_every_days">반복 주기 (일)</string>
+    <string name="label_quick_select">빠른 선택</string>
+    <string name="label_note_optional">메모 (선택)</string>
+    <string name="label_date">날짜</string>
+    <string name="label_first_next_run_date">첫 번째/다음 실행일</string>
+    <string name="label_new_category">새 카테고리</string>
+    <string name="title_add_new_category">새 카테고리 추가</string>
+    <string name="label_category_name">카테고리 이름</string>
+    <string name="label_existing_categories">기존 카테고리</string>
+    <string name="title_edit_category">카테고리 편집</string>
+    <string name="title_delete_category">카테고리를 삭제하시겠습니까?</string>
+    <string name="msg_delete_category_confirm">\"%1$s\"을(를) 삭제하시겠습니까? 이 작업은 취소할 수 없습니다.</string>
+    <string name="error_enter_valid_days">올바른 일수를 입력하세요</string>
+    <string name="msg_create_category_desc">%1$s용 새 카테고리를 만듭니다.</string>
+    <string name="label_total_spent">총 지출</string>
+    <string name="label_under_status">이하</string>
+    <string name="label_over_status">초과</string>
+    <string name="label_new_action">새로 만들기</string>
+    <string name="label_amount_field">금액</string>
+
+    <string name="label_total_balance">총 잔액</string>
+    <string name="label_month_income">이번 달 수입</string>
+    <string name="label_month_expenses">이번 달 지출</string>
+    <string name="label_savings_rate">저축률</string>
+    <string name="title_filters">필터</string>
+    <string name="label_transaction_type">거래 유형</string>
+    <string name="label_time_period">기간</string>
+    <string name="label_x_days_filter">%1$d일</string>
+    <string name="label_sort_order">정렬</string>
+    <string name="label_date_sort">날짜</string>
+    <string name="label_amount_sort">금액</string>
+    <string name="label_descending">내림차순</string>
+    <string name="label_ascending">오름차순</string>
+    <string name="hint_search_transactions">거래 검색&#8230;</string>
+
+    <string name="label_total">합계</string>
+    <string name="label_all">전체</string>
+    <string name="label_spent">지출</string>
+    <string name="label_remaining">잔여</string>
+    <string name="label_target">목표</string>
+    <string name="label_actual">실제</string>
+    <string name="label_income">수입</string>
+    <string name="label_expenses">지출</string>
+    <string name="label_over_limit">한도 초과</string>
+    <string name="label_of_total">(전체 대비)</string>
+    <string name="label_used">%1$s 사용됨</string>
+    <string name="label_no_data">데이터가 없습니다</string>
+
+    <string name="chart_income_expense_trend">수입 vs 지출 추이</string>
+    <string name="chart_category_breakdown">카테고리별 비중</string>
+    <string name="chart_monthly_comparison">월별 비교</string>
+    <string name="chart_on_track">순조로운가요?</string>
+    <string name="chart_actual_vs_target">실제 vs 목표</string>
+    <string name="chart_budget_allocation">예산 할당</string>
+    <string name="chart_monthly_trends">월별 예산 추이</string>
+    <string name="chart_quick_look">빠른 보기</string>
+
+    <string name="msg_no_recurring">향후 30일 동안 예정된 내역이 없습니다</string>
+    <string name="msg_add_recurring_hint">월세, 급여, 구독료 등을 추가하여 예정 내역을 확인하세요.</string>
+    <string name="msg_no_budgets">아직 예산이 없습니다</string>
+    <string name="msg_unlock_to_view">재무 데이터를 보려면 잠금을 해제하세요</string>
+    <string name="msg_locked">머니 매니저가 잠겨 있습니다</string>
+
+    <string name="msg_no_transactions">거래 내역이 없습니다</string>
+    <string name="msg_adjust_filters">검색어나 필터를 조정해 보세요</string>
+
+    <string name="btn_unlock">지금 해제</string>
+
+    <string name="label_today">오늘</string>
+    <string name="label_tomorrow">내일</string>
+
+    <!-- Settings -->
+    <string name="settings_subtitle">나만의 경험 설정</string>
+    <string name="section_appearance">화면 설정</string>
+    <string name="theme_mode">테마 모드</string>
+    <string name="theme_system">시스템 설정 따름</string>
+    <string name="theme_light">라이트 모드</string>
+    <string name="theme_dark">다크 모드</string>
+
+    <string name="section_security">보안 및 개인정보</string>
+    <string name="biometric_lock">생체 인증 잠금</string>
+    <string name="biometric_subtitle">지문 또는 안면 인식 사용</string>
+    <string name="privacy_mode">개인정보 보호 모드</string>
+    <string name="privacy_subtitle">대시보드와 목록에서 잔액 숨기기</string>
+
+    <string name="section_automation">자동화</string>
+    <string name="auto_approve">일정 자동 승인</string>
+    <string name="auto_approve_subtitle">예정일에 정기 결제를 자동으로 기록</string>
+
+    <string name="section_regional">지역 및 언어</string>
+    <string name="currency">통화</string>
+    <string name="language">언어</string>
+    <string name="select_currency">통화 선택</string>
+    <string name="search_currency_hint">통화 이름 또는 코드 검색</string>
+
+    <string name="section_planning_settings">계획 설정</string>
+    <string name="budget_window">예산 기간</string>
+    <string name="window_week">주</string>
+    <string name="window_month">월</string>
+    <string name="window_quarter">분기</string>
+
+    <string name="section_management">관리</string>
+    <string name="manage_accounts">계좌 관리</string>
+    <string name="manage_accounts_subtitle">은행 계좌, 지갑, 현금</string>
+    <string name="manage_categories">카테고리 관리</string>
+    <string name="manage_categories_subtitle">지출 및 수입 태그 편집</string>
+
+    <string name="section_support">지원 및 피드백</string>
+    <string name="send_feedback">피드백 보내기</string>
+    <string name="send_feedback_subtitle">제안하거나 문제를 보고하세요</string>
+    <string name="export_csv">CSV 내보내기</string>
+    <string name="export_csv_subtitle">거래 내역 다운로드</string>
+    <string name="export_database">백업 내보내기</string>
+    <string name="export_database_subtitle">모든 데이터의 전체 백업 저장</string>
+    <string name="privacy_policy">개인정보 처리방침</string>
+    <string name="privacy_policy_subtitle">개인정보 보호를 위한 노력을 확인하세요</string>
+
+    <string name="feedback_dialog_title">제안 사항 공유</string>
+    <string name="feedback_dialog_text">머니 매니저를 개선할 수 있는 아이디어를 들려주세요.</string>
+    <string name="feedback_placeholder">자유롭게 입력해주세요&#8230;</string>
+    <string name="btn_send_email">이메일 보내기</string>
+    <string name="btn_cancel">취소</string>
+    <string name="btn_ok">확인</string>
+
+    <!-- Common Actions -->
+    <string name="action_save">저장</string>
+    <string name="action_update">업데이트</string>
+    <string name="action_delete">삭제</string>
+    <string name="action_edit">편집</string>
+    <string name="action_create">생성</string>
+    <string name="action_add">추가</string>
+    <string name="action_done">완료</string>
+    <string name="action_open">열기</string>
+    <string name="action_reset_all">전체 초기화</string>
+    <string name="action_show_results">결과 보기</string>
+
+    <!-- FAB Labels -->
+    <string name="fab_add_transaction">거래 추가</string>
+    <string name="fab_add_category">카테고리 추가</string>
+    <string name="fab_add_account">계좌 추가</string>
+
+    <!-- Loading/Startup -->
+    <string name="loading_slogan">안전하게 • 간편하게 • 똑똑하게</string>
+
+    <!-- Categories -->
+    <string name="cat_salary">급여</string>
+    <string name="cat_freelance">프리랜서</string>
+    <string name="cat_food">식비</string>
+    <string name="cat_rent">월세</string>
+    <string name="cat_transport">교통비</string>
+    <string name="cat_utilities">공과금</string>
+    <string name="cat_shopping">쇼핑</string>
+    <string name="cat_uncategorized">미분류</string>
+    <string name="onboarding_welcome">머니 매니저에 오신 것을 환영합니다</string>
+    <string name="onboarding_track_title">모든 것을 추적하세요</string>
+    <string name="onboarding_track_desc">계좌와 현금을 한 곳에서 편하게 관리하세요.</string>
+    <string name="onboarding_budget_title">스마트한 예산 세우기</string>
+    <string name="onboarding_budget_desc">카테고리별 월 지출 한도를 설정하세요.</string>
+    <string name="onboarding_insights_title">금융 분석</string>
+    <string name="onboarding_insights_desc">소비 습관을 자동으로 분석해 드립니다.</string>
+    <string name="btn_get_started">시작하기</string>
+    <string name="btn_next">다음</string>
+    <string name="btn_skip">건너뛰기</string>
+
+    <!-- Success/Error Messages -->
+    <string name="csv_saved">다운로드 폴더에 저장됨</string>
+    <string name="csv_failed">CSV 저장 실패</string>
+    <string name="error_invalid_amount">유효한 금액을 입력하세요</string>
+    <string name="error_invalid_name">이름을 입력하세요</string>
+    <string name="error_select_category">카테고리를 선택하세요</string>
+
+    <!-- Accessibility Descriptions -->
+    <string name="cd_delete">삭제</string>
+    <string name="cd_edit">편집</string>
+    <string name="cd_search">검색</string>
+    <string name="cd_close">닫기</string>
+    <string name="cd_back">뒤로</string>
+    <string name="cd_add">추가</string>
+    <string name="cd_filter">필터</string>
+    <string name="cd_skip">건너뛰기</string>
+    <string name="cd_pay_now">지금 결제</string>
+    <string name="cd_reset">초기화</string>
+    <string name="cd_next">다음</string>
+
+    <!-- Insights -->
+    <string name="insight_tone_saving">저축 추세</string>
+    <string name="insight_tone_spending">지출 경고</string>
+    <string name="insight_tone_good">좋은 추세</string>
+    <string name="insight_tone_watch">주의 관찰</string>
+    <string name="insight_tone_start">시작</string>
+
+    <string name="insight_monthly_compare">지난달 동기 대비 지출이 %1$s %2$s습니다.</string>
+    <string name="insight_savings_positive">이번 달 수입의 %1$s를 저축했습니다. 아주 좋습니다!</string>
+    <string name="insight_savings_neutral">이번 달 수입의 %1$s를 저축했습니다. 조금만 더 아끼면 훨씬 나아질 거예요.</string>
+    <string name="insight_savings_negative">이번 달 지출이 수입보다 많습니다. 큰 지출 카테고리를 먼저 확인해보세요.</string>
+    <string name="insight_7day_compare">지난 7일 동안의 지출이 그 전 7일보다 %1$s %2$s습니다.</string>
+    <string name="insight_budget_over">예산을 %1$s 초과했습니다.</string>
+    <string name="insight_budget_near">예산 한도까지 %1$s 남았습니다.</string>
+    <string name="insight_budget_normal">예산의 %1$s를 사용 중입니다.</string>
+    <string name="insight_top_spend">가장 많은 지출은 %1$s(%2$s)입니다.</string>
+    <string name="insight_upcoming_item">%1$s 결제일이 %2$s입니다.</string>
+    <string name="insight_empty_state">거래, 예산, 정기 내역을 추가하여 분석 기능을 활성화하세요.</string>
+
+    <string name="label_more">많았</string>
+    <string name="label_less">적었</string>
+
+    <string name="tab_trend">추세</string>
+    <string name="tab_categories">카테고리</string>
+    <string name="tab_monthly">월별</string>
+    <string name="tab_line">선형</string>
+    <string name="tab_donut">도넛</string>
+    <string name="tab_bar">막대</string>
+    <string name="tab_progress">진행</string>
+</resources>
