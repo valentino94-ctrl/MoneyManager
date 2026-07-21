@@ -556,7 +556,23 @@ private fun FeedbackDialog(
 
     com.v94studio.moneymanager.ui.components.PremiumAlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(stringResource(R.string.feedback_dialog_title)) },
+        title = {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(
+                    text = stringResource(R.string.feedback_dialog_title),
+                    modifier = Modifier.weight(1f)
+                )
+                IconButton(onClick = onDismiss) {
+                    Icon(
+                        imageVector = Icons.Default.Close,
+                        contentDescription = stringResource(R.string.close_feedback_dialog)
+                    )
+                }
+            }
+        },
         text = {
             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 Text(
