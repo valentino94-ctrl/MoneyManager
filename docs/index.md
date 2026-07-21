@@ -2,8 +2,6 @@
 title: Money Manager
 ---
 
-# Money Manager
-
 Money Manager is a privacy-conscious Android application by **V94 Studio** for
 tracking accounts, transactions, budgets, recurring activity, and saving goals.
 

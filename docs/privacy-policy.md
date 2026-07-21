@@ -2,8 +2,6 @@
 title: Money Manager Privacy Policy
 ---
 
-# Money Manager Privacy Policy
-
 **Effective date:** July 21, 2026
 
 Money Manager is a personal-finance application designed to work primarily on
