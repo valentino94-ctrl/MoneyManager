@@ -31,6 +31,8 @@ import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.unit.toSize
+import androidx.compose.ui.window.Dialog
+import androidx.compose.ui.window.DialogProperties
 import androidx.compose.ui.zIndex
 import com.v94studio.moneymanager.ui.theme.BrandPurple
 import kotlin.math.roundToInt
@@ -65,33 +67,42 @@ fun FeatureDiscoveryOverlay(
         bottom = targetRect.bottom - overlayOrigin.y
     )
 
-    BoxWithConstraints(
-        modifier = Modifier
-            .fillMaxSize()
-            .zIndex(2000f)
-            .onGloballyPositioned { coordinates ->
-                overlayOrigin = coordinates.positionInWindow()
-            }
-            .pointerInput(localTargetRect) {
-                awaitPointerEventScope {
-                    while (true) {
-                        val event = awaitPointerEvent()
-                        val change = event.changes.first()
-                        val position = change.position
-                        
-                        // Dismiss on any press event outside target
-                        if (event.type == PointerEventType.Press && !localTargetRect.contains(position)) {
-                            onDismiss()
-                        }
+    Dialog(
+        onDismissRequest = onDismiss,
+        properties = DialogProperties(
+            dismissOnBackPress = true,
+            dismissOnClickOutside = false,
+            usePlatformDefaultWidth = false,
+            decorFitsSystemWindows = false
+        )
+    ) {
+        BoxWithConstraints(
+            modifier = Modifier
+                .fillMaxSize()
+                .zIndex(2000f)
+                .onGloballyPositioned { coordinates ->
+                    overlayOrigin = coordinates.positionInWindow()
+                }
+                .pointerInput(localTargetRect) {
+                    awaitPointerEventScope {
+                        while (true) {
+                            val event = awaitPointerEvent()
+                            val change = event.changes.first()
+                            val position = change.position
 
-                        if (!localTargetRect.contains(position)) {
-                            // Touch outside target area: block interaction with underlying UI
-                            change.consume()
+                            // Dismiss on any press event outside target
+                            if (event.type == PointerEventType.Press && !localTargetRect.contains(position)) {
+                                onDismiss()
+                            }
+
+                            if (!localTargetRect.contains(position)) {
+                                // Touch outside target area: block interaction with underlying UI
+                                change.consume()
+                            }
                         }
                     }
                 }
-            }
-    ) {
+        ) {
         val overlayWidthDp = maxWidth.value
         val overlayHeightDp = maxHeight.value
 
@@ -117,7 +128,7 @@ fun FeatureDiscoveryOverlay(
                 }
                 fillType = PathFillType.EvenOdd
             }
-            drawPath(path, Color.Black.copy(alpha = 0.8f))
+            drawPath(path, Color.Black.copy(alpha = 0.88f))
         }
 
         if (localTargetRect != Rect.Zero) {
@@ -180,6 +191,7 @@ fun FeatureDiscoveryOverlay(
                 )
             }
         }
+    }
     }
 }
 
