@@ -38,6 +38,7 @@ fun AppBottomSheet(
         containerColor = containerColor,
         tonalElevation = 0.dp, // Clean fintech look (prevents purple tint)
         scrimColor = Color.Black.copy(alpha = 0.4f), // High-quality scrim
+        sheetMaxWidth = 640.dp,
         shape = RoundedCornerShape(topStart = 32.dp, topEnd = 32.dp),
         dragHandle = if (showDragHandle) {
             { 

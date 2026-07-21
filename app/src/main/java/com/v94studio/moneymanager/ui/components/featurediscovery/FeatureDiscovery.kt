@@ -25,7 +25,6 @@ import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.layout.positionInWindow
-import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.IntOffset
@@ -58,7 +57,6 @@ fun FeatureDiscoveryOverlay(
     if (!isVisible || targetRect == Rect.Zero) return
 
     val density = LocalDensity.current
-    val configuration = LocalConfiguration.current
     var overlayOrigin by remember { mutableStateOf(Offset.Zero) }
     val localTargetRect = Rect(
         left = targetRect.left - overlayOrigin.x,
@@ -67,7 +65,7 @@ fun FeatureDiscoveryOverlay(
         bottom = targetRect.bottom - overlayOrigin.y
     )
 
-    Box(
+    BoxWithConstraints(
         modifier = Modifier
             .fillMaxSize()
             .zIndex(2000f)
@@ -94,6 +92,9 @@ fun FeatureDiscoveryOverlay(
                 }
             }
     ) {
+        val overlayWidthDp = maxWidth.value
+        val overlayHeightDp = maxHeight.value
+
         // Dimmed background with circular or rectangular cutout using EvenOdd fill type
         Canvas(modifier = Modifier.fillMaxSize()) {
             val path = Path().apply {
@@ -132,8 +133,8 @@ fun FeatureDiscoveryOverlay(
 
             // Tooltip Bubble
             Box(modifier = Modifier.fillMaxSize()) {
-                val screenWidthDp = configuration.screenWidthDp.toFloat()
-                val screenHeightDp = configuration.screenHeightDp.toFloat()
+                val screenWidthDp = overlayWidthDp
+                val screenHeightDp = overlayHeightDp
                 val tooltipWidthValue = min(320f, screenWidthDp - 32f).coerceAtLeast(240f)
                 val tooltipWidth = tooltipWidthValue.dp
                 var tooltipHeightPx by remember { mutableIntStateOf(0) }

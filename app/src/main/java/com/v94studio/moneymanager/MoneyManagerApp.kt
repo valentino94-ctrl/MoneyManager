@@ -346,21 +346,7 @@ private fun AppScaffold(
                         modifier = Modifier.width(240.dp),
                         drawerContainerColor = Color.Transparent
                     ) {
-                        Spacer(Modifier.height(12.dp))
-                        Text(
-                            text = stringResource(R.string.app_name),
-                            style = MaterialTheme.typography.titleLarge.copy(
-                                brush = Brush.horizontalGradient(
-                                    colors = listOf(
-                                        Color(0xFF6B21A8), // Strong Purple
-                                        Color(0xFFEC4899), // Pink
-                                        Color(0xFFF0ABFC)  // Light Pink
-                                    )
-                                )
-                            ),
-                            modifier = Modifier.padding(16.dp),
-                            fontWeight = FontWeight.ExtraBold
-                        )
+                        Spacer(Modifier.height(28.dp))
                         AppDestination.all.forEach { destination ->
                             NavigationDrawerItem(
                                 label = { Text(stringResource(destination.labelRes)) },
@@ -630,6 +616,14 @@ private fun MainContent(
         val showFab = fabConfig != null && showUi && isActivityFabReady
 
         Scaffold(
+            modifier = if (navigationType == MoneyNavigationType.BOTTOM_NAVIGATION) {
+                Modifier.fillMaxSize()
+            } else {
+                Modifier
+                    .widthIn(max = 840.dp)
+                    .fillMaxSize()
+                    .align(Alignment.TopCenter)
+            },
             containerColor = Color.Transparent,
             topBar = {
                 if (showRetainedHeader) {
@@ -667,7 +661,6 @@ private fun MainContent(
                             Box(
                                 modifier = Modifier
                                     .fillMaxSize()
-                                    .discoverable { featureDiscoveryViewModel.onTargetPositioned(TutorialType.FAB, it) }
                                     .background(Brush.linearGradient(BrandPurpleGradient))
                                     .then(
                                         if (isDark) Modifier.background(Color.Black.copy(alpha = 0.4f)) else Modifier
@@ -699,9 +692,9 @@ private fun MainContent(
             val contentModifier = remember(navigationType) {
                 if (navigationType != MoneyNavigationType.BOTTOM_NAVIGATION) {
                     Modifier
+                        .widthIn(max = 800.dp)
                         .fillMaxSize()
                         .padding(horizontal = 24.dp)
-                        .widthIn(max = 1200.dp)
                 } else {
                     Modifier
                         .fillMaxSize()
