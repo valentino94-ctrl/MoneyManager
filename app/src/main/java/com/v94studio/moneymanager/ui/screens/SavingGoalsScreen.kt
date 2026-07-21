@@ -184,7 +184,9 @@ fun SavingGoalsScreen(
                 item(key = "empty_state") {
                     FintechCard {
                         Column(
-                            modifier = Modifier.padding(32.dp),
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(32.dp),
                             horizontalAlignment = Alignment.CenterHorizontally
                         ) {
                             Surface(
@@ -202,10 +204,18 @@ fun SavingGoalsScreen(
                                 }
                             }
                             Spacer(Modifier.height(24.dp))
-                            Text(stringResource(R.string.msg_no_goals), style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.onSurface)
+                            Text(
+                                text = stringResource(R.string.msg_no_goals),
+                                modifier = Modifier.fillMaxWidth(),
+                                style = MaterialTheme.typography.titleLarge,
+                                fontWeight = FontWeight.Bold,
+                                color = MaterialTheme.colorScheme.onSurface,
+                                textAlign = androidx.compose.ui.text.style.TextAlign.Center
+                            )
                             Spacer(Modifier.height(8.dp))
                             Text(
-                                stringResource(R.string.msg_goals_hint), 
+                                text = stringResource(R.string.msg_goals_hint),
+                                modifier = Modifier.fillMaxWidth(),
                                 style = MaterialTheme.typography.bodyMedium,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.6f),
                                 textAlign = androidx.compose.ui.text.style.TextAlign.Center
